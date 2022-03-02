@@ -1,0 +1,120 @@
+@import "../../global.scss";
+
+.topbar {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  color: white;
+  font-size: 2.2vh;
+  font-weight: 500;
+
+  .wrapper {
+    padding: 0px 4vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      width: 50%;
+    }
+
+    .right {
+      width: 50%;
+      padding: 0 1vh;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      .tb_buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        height: 100%;
+
+        li {
+          height: 60%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin: 1;
+
+          .button_bar {
+            width: 33%;
+          }
+
+          #tb_aboutme_bar {
+            border-bottom: 0.4vh solid $purple;
+          }
+          #tb_portfolio_bar {
+            border-bottom: 0.4vh solid $green;
+          }
+          #tb_employment_bar {
+            border-bottom: 0.4vh solid $yellow;
+          }
+          #tb_education_bar {
+            border-bottom: 0.4vh solid $blue;
+          }
+
+          #tb_letschat {
+            color: black;
+            padding: 1vh;
+            background-color: $red;
+            border: 0.3vh solid rgb(105, 10, 10);
+            border-radius: 2vh;
+            margin: 0.2vh;
+          }
+
+          a {
+            padding: 0 2vh;
+            color: inherit;
+            text-decoration: none;
+          }
+
+          a:not(#tb_letschat) {
+            text-shadow: 1px 1px 2px black;
+          }
+
+          a:hover:not(#tb_letschat) {
+            -webkit-transform: scale(1.1);
+          }
+
+          a:hover + .button_bar {
+            width: 38%;
+          }
+
+          a:visited {
+            color: inherit;
+          }
+
+          #tb_aboutme:hover {
+            color: $purple;
+          }
+
+          #tb_portfolio:hover {
+            color: $green;
+          }
+
+          #tb_employment:hover {
+            color: $yellow;
+          }
+
+          #tb_education:hover {
+            color: $blue;
+          }
+
+          #tb_letschat:hover {
+            color: rgb(90, 90, 90);
+            -webkit-transform: scale(1.03);
+          }
+        }
+      }
+    }
+  }
+}
